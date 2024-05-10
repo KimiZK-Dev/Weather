@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'TikTokDisplay-Medium';
+    src: url(./Fonts/TikTokDisplay-Medium.otf) format('truetype')
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font)
+}
+
+:root {
+    --font: 'TikTokDisplay-Medium', san-srift;
+    --clr: #16394C;
+    --clr2: #fff;
+    --clr3: #608094;
+    --clr4: #00ffd0;
+    --clr5: #d4d4d8;
+    --clr6: #67c2c252;
+    --clr7: #9F70B8;
+    --clr8: #92ff53;
+    --clr9: #F3EEF8;
+    --clr10: #db8c57
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #256080;
+}
+
+.card {
+    background: var(--clr);
+    width: 600px;
+    padding: 50px;
+    border: 10px solid var(--clr3);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35)
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.seacrh-btn {
+    width: 100%;
+    max-width: 350px;
+    outline: none;
+    border: none;
+    color: var(--clr2);
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: #0000006c
+}
+
+.search-enter {
+    outline: none;
+    border: none;
+    color: var(--clr2);
+    padding: 12px 12px;
+    margin-right: 10px;
+    border-radius: 30%;
+    background: #0000006c;
+    transition: .25s ease
+}
+
+.search-enter:hover {
+    background: #004966
+}
+
+.err {
+    color: var(--clr8);
+    text-align: center;
+    width: 120px;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 30px
+}
+
+.info {
+    position: relative;
+    margin-top: 15px
+}
+
+.location {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    background: var(--clr3);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px
+}
+
+.temp-and-moreinfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px
+}
+
+.temp,
+.moreinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #004966;
+    padding: 20px 30px;
+    border-radius: 10px
+}
+
+.title-temp {
+    background: var(--clr5);
+    padding: 5px 40px;
+    border-radius: 5px
+}
+
+.title-moreinfo {
+    background: var(--clr5);
+    padding: 5px 25px;
+    border-radius: 5px
+}
+
+.info-temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px
+}
+
+.last-updated::before {
+    content: "Cập Nhật: ";
+    color: var(--clr5)
+}
+
+.icon {
+    width: 50px;
+    height: 50px
+}
+
+.result-temp {
+    color: var(--clr4);
+    background: var(--clr3);
+    padding: 5px 8px;
+    border-radius: 5px
+}
+
+.more {
+    margin-top: 5px
+}
+
+.country,
+.lat-lon,
+.gust-kph,
+.feelslike,
+.current-weather {
+    color: var(--clr7)
+}
+
+.country::before {
+    content: 'Quốc gia: ';
+    color: var(--clr5)
+}
+
+.lat-lon::before {
+    content: 'Tọa độ: ';
+    color: var(--clr5)
+}
+
+.gust-kph::before {
+    content: 'Tốc độ gió giật: ';
+    color: var(--clr5)
+}
+
+.feelslike::before {
+    content: 'Nhiệt độ cảm nhận được: ';
+    color: var(--clr5)
+}
+
+.current-weather::before {
+    content: 'Thời tiết hiện tại: ';
+    color: var(--clr5)
+}
+
+#real-time {
+    margin-top: 3px;
+    color: var(--clr8);
+    text-align: center;
+    background: var(--clr7);
+    padding: 2px;
+    border-radius: 5px
+}
+
+.wind-and-humidity-and-uv {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.wind {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 120px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background: var(--clr3)
+}
+
+.humidity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 110px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background: var(--clr3)
+}
+
+.uv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 120px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background: var(--clr3)
+}
+
+.value-uv::before {
+    content: 'UV: Cấp '
+}
+
+.desicription {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px dotted var(--clr9);
+    background: var(--clr6)
+}
+
+.daytime-desicription::before {
+    content: '🌞Ban Ngày: ';
+    color: var(--clr8)
+}
+
+.night-desicription::before {
+    content: '🌚Ban Đêm: ';
+    color: var(--clr7)
+}
+
+.weather-desicription::before {
+    content: '📅Trong ngày: ';
+    color: var(--clr9)
+}
+
+.desicription-astronomy {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 4px dotted var(--clr8);
+    border-radius: 5px;
+    background: var(--clr6);
+}
+
+.sun {
+    display: flex;
+    justify-content: space-around;
+    color: var(--clr4)
+}
+
+.sunrise::before {
+    content: '🌅Mặt trời mọc: ';
+    color: var(--clr8)
+}
+
+.sunset::before {
+    content: '🌇Mặt trời lặn: ';
+    color: var(--clr10)
+}
+
+.moon {
+    display: flex;
+    justify-content: space-around;
+    color: var(--clr4)
+}
+
+.moonrise::before {
+    content: '🌝Mặt trăng mọc: ';
+    color: var(--clr8)
+}
+
+.moonset::before {
+    content: '🌚Mặt trăng lặn: ';
+    color: var(--clr10)
+}
